@@ -16,13 +16,13 @@ numeral = ""  # numeral is the number display
 message = ""  # message is a full-screen message
 background_color = ""
 count_down_photo = ""
-CountPhotoOnCart = ""
+count_photo_on_cart = ""
 small_message = ""  # small_message is a lower banner message
 total_image_count = 0  # Counter for Display and to monitor paper usage
 photos_per_cart = 30  # Selphy takes 16 sheets per tray
 image_counter = 0
 image_folder = 'Photos'
-templatePath = os.path.join('Photos', 'Template', "template.jpg")  # Path of template image
+template_path = os.path.join('Photos', 'Template', "template.png")  # Path of template image
 image_showed = False
 printing = False
 BUTTON_PIN = 25
@@ -32,7 +32,7 @@ IMAGE_WIDTH = 550
 IMAGE_HEIGHT = 360
 
 # Load the background template
-bgimage = PIL.Image.open(templatePath)
+bgimage = PIL.Image.open(template_path)
 
 # Setup GPIO
 GPIO.setmode(GPIO.BCM)
@@ -321,7 +321,7 @@ def take_pictures():
     global count_down_photo
     global background_color
     global printing
-    global PhotosPerCart
+    global photos_per_cart
     global total_image_count
 
     user_input(pygame.event.get())
